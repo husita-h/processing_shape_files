@@ -7,5 +7,5 @@ import geopandas as gpd
 
 path_shp = "../data/pl_distribution_map/liqpt.shp"
 gdf = gpd.read_file(path_shp)
-gdf.to_file("test.geojson", driver='GeoJSON', encoding="utf-8")
-print(gdf).head
+gdf.to_file("./data/output.geojson", driver='GeoJSON', encoding="utf-8")
+gdf.to_csv("./data/output.csv")
