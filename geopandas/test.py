@@ -7,5 +7,7 @@ import geopandas as gpd
 
 path_shp = "../data/pl_distribution_map/liqpt.shp"
 gdf = gpd.read_file(path_shp)
-gdf.to_file("./data/output.geojson", driver='GeoJSON', encoding="utf-8")
-gdf.to_csv("./data/output.csv")
+gdf.to_file("./data/output_utf-8.geojson", driver='GeoJSON', encoding="utf-8")
+gdf.to_file("./data/output_shift-jis.geojson", driver='GeoJSON', encoding="shift-jis")
+gdf.to_csv("./data/output_utf-8.csv")
+gdf.to_csv("./data/output_shift-jis.csv")
